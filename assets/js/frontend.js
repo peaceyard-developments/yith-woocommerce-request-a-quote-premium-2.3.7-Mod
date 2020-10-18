@@ -275,6 +275,11 @@ jQuery(document).ready(function ($) {
 				$t.after(' <img src="' + ajax_loader + '" class="ywraq-loader" >');
 			},
 			complete: function () {
+				//MRR - FPD toggle spinner off when product added to raq page
+				fancyProductDesigner.toggleSpinner(false);
+				jQuery(".single_add_to_cart_button").removeClass("fpd-disabled");
+				jQuery(".add-request-quote-button").removeClass("fpd-disabled");
+				// MRR-END
 				$t.next().remove();
 			},
 
