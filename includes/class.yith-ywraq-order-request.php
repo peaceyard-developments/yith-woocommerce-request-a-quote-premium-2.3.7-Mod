@@ -987,7 +987,7 @@ class YITH_YWRAQ_Order_Request
 				$args
 			);
 
-			//MRR - This is where custom product meta (eq. _fpd_product_thumbnail, _fpd_data passes to order
+			//This is where custom product meta (eq. _fpd_product_thumbnail, _fpd_data passes to order
 			do_action('ywraq_from_cart_to_order_item', $values, $cart_item_key, $item_id, $order);
 		}
 

@@ -682,7 +682,7 @@ if (!class_exists('YITH_YWRAQ_Default_Form')) {
 					$filled_form_fields['user_message'] = isset($posted['message']) ? sanitize_text_field($posted['message']) : '';
 
 					if (get_option('ywraq_enable_order_creation', 'yes') == 'yes') {
-						//MRR - This is where when default form submited raq_content pass to wc
+						//This is where when default form submited raq_content pass to wc
 						do_action('ywraq_process', $filled_form_fields);
 					}
 
