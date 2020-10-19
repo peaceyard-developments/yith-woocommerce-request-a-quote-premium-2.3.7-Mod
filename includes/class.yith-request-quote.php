@@ -553,7 +553,7 @@ if (!class_exists('YITH_Request_Quote')) {
 							'product_id' => $product_raq['product_id'],
 							'quantity'   => $product_raq['quantity'],
 						);
-						// MRR - This is where additional meta data added to raq single product 
+						//This is where additional meta data added to raq single product 
 						$raq = apply_filters('ywraq_add_item', $raq, $product_raq);
 
 						$this->raq_content[apply_filters('ywraq_quote_item_id', md5($product_raq['product_id']), $product_raq)] = $raq;
@@ -574,7 +574,7 @@ if (!class_exists('YITH_Request_Quote')) {
 						'variation_id' => $product_raq['variation_id'],
 						'quantity'     => $product_raq['quantity'],
 					);
-					// MRR - This is where additional meta data added to raq variable product 
+					//This is where additional meta data added to raq variable product 
 					$raq = apply_filters('ywraq_add_item', $raq, $product_raq);
 
 					$variations = array();
@@ -723,7 +723,7 @@ if (!class_exists('YITH_Request_Quote')) {
 			}
 
 			$is_valid = apply_filters('ywraq_ajax_add_item_is_valid', $product_id && $is_valid_variation, $product_id);
-			//MRR - this is where yith get fpd data from fpd cart form feilds
+			//this is where yith get fpd data from fpd cart form feilds
 			$postdata = $_POST; //phpcs:ignore WordPress.Security.NonceVerification.Missing
 
 			$postdata = apply_filters('ywraq_ajax_add_item_prepare', $postdata, $product_id);
